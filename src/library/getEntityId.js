@@ -19,6 +19,7 @@ const getEntityId = (node) => {
       entityConfig.url = node.getAttribute ? node.getAttribute('href') || node.href : node.href;
       entityConfig.title = node.innerHTML;
       entityConfig.targetOption = node.target;
+      entityConfig.relOption = node.rel;
       entityId = Entity.__create(
         'LINK',
         'MUTABLE',
